@@ -74,7 +74,7 @@ The temporary upgrade-test installer for version 1.0.1 was blocked by Windows Ap
 
 The test-only 1.0.1 package was excluded from final release outputs. The final public-facing version remains 1.0.0.
 
-The installer remains unsigned. GitHub workflow execution/publication and a separate Windows 10 compatibility run remain unverified. The workspace has no Git remote configured for publication.
+The installer remains unsigned. A separate Windows 10 compatibility run remains unverified. GitHub publication was subsequently completed as recorded below.
 
 ## Reproduce the main checks
 
@@ -88,3 +88,13 @@ java -jar target/smart-file-organizer.jar
 To rebuild the Windows release, use `scripts/package-windows.ps1` with a Windows x64 JDK 21, Maven, and WiX 3.x. Move the existing version output aside before rebuilding.
 
 The packaging script runs tests and verifies the packaged launcher. Installation and upgrade checks were manual audit operations and are separate from that script.
+
+## GitHub publication and tutorial update
+
+The project was published to https://github.com/naveenkumarbuilds-stack/smart-file-organizer.
+
+- Build and test workflow passed: https://github.com/naveenkumarbuilds-stack/smart-file-organizer/actions/runs/41714613046
+- Windows release workflow passed: https://github.com/naveenkumarbuilds-stack/smart-file-organizer/actions/runs/41714615145
+- Public release: https://github.com/naveenkumarbuilds-stack/smart-file-organizer/releases/tag/v1.0.0
+
+The release contains a Windows x64 installer built on GitHub, the runnable JAR, and checksums. The quick-start video adds English synthetic narration and captions to actual captured screens and clearly labelled illustrated steps. The MP4 was decoded completely for verification, and its audio and review frames were checked.

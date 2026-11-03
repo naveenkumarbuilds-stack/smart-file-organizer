@@ -15,6 +15,14 @@ Choose a folder, review the proposed destinations, and select which files to inc
 - Remember the last successfully previewed folder.
 - Show moved, skipped, and failed counts, with detailed application logs.
 
+## Video guide
+
+[![Watch the 3-minute quick-start guide](docs/images/tutorial-poster.png)](https://github.com/naveenkumarbuilds-stack/smart-file-organizer/releases/download/v1.0.0/SmartFileOrganizer-QuickStart.mp4)
+
+A 3 minute 20 second guide with English synthetic narration and on-screen captions. It combines actual GitHub/app screens with illustrated installation, result, and undo steps.
+
+[Download the MP4](https://github.com/naveenkumarbuilds-stack/smart-file-organizer/releases/download/v1.0.0/SmartFileOrganizer-QuickStart.mp4) · [Download captions](https://github.com/naveenkumarbuilds-stack/smart-file-organizer/releases/download/v1.0.0/SmartFileOrganizer-QuickStart.srt) · [Read the transcript](docs/quick-start-video.md)
+
 ## Screenshot
 
 ![Preview with a sorted table and one file excluded](docs/images/preview.png)
@@ -133,7 +141,7 @@ The current version uses the default extension mapping and direct-child scanning
 
 ### What has been verified?
 
-All 98 tests passed on Java 21. The runnable JAR and Windows EXE were built, and the packaged application opened and closed using its bundled runtime. Installer installation, installed-app launch, and uninstallation were also verified in an isolated project folder. Upgrade testing was blocked by Windows Application Control. GitHub workflow execution and a separate Windows 10 compatibility run remain unverified. See the [final local review](docs/final-review.md) for the audit results.
+All 98 tests passed on Java 21. The runnable JAR and Windows EXE were built, and the packaged application opened and closed using its bundled runtime. Installer installation, installed-app launch, and uninstallation were also verified in an isolated project folder. Upgrade testing was blocked by Windows Application Control. Both GitHub build and release workflows passed, and version 1.0.0 is published. A separate Windows 10 compatibility run remains unverified. See the [final local review](docs/final-review.md) for the audit results.
 
 ## Contributing
 
