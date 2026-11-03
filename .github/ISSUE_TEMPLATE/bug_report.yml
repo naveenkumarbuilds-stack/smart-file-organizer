@@ -1,0 +1,65 @@
+name: Bug report
+description: Report a reproducible problem with preview, organization, undo, or the interface.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use dummy filenames where possible. Logs and undo.json can contain full paths.
+        Keep recovery files intact and review attachments before sharing them publicly.
+  - type: input
+    id: app-version
+    attributes:
+      label: App version
+      description: Include the release version or source commit.
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Operating system
+      description: Include the Windows version and x64 architecture, or the platform used for a source build.
+    validations:
+      required: true
+  - type: dropdown
+    id: launch-method
+    attributes:
+      label: How did you run the app?
+      options:
+        - Windows installer
+        - Runnable JAR
+        - Built from source
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and which operation was running.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include a small directory example with dummy files and the selected preview rows.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Actual behavior and result counts
+      description: Include the dialog message and moved, skipped, or failed counts when available.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Optional logs or screenshots
+      description: Remove private paths and sensitive content before attaching diagnostic information.

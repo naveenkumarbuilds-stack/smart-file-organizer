@@ -1,0 +1,9 @@
+/target/
+/.build-tools/
+/dist/
+*.log
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db

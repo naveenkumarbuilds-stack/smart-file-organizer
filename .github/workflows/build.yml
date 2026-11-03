@@ -1,0 +1,36 @@
+name: Build and test
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+          architecture: x64
+          cache: maven
+      - name: Verify
+        run: mvn --batch-mode --no-transfer-progress clean verify
+      - name: Upload runnable JAR
+        uses: actions/upload-artifact@v7
+        with:
+          name: runnable-jar
+          path: target/smart-file-organizer.jar
+          if-no-files-found: error
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-reports
+          path: target/surefire-reports/
+          if-no-files-found: warn
